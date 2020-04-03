@@ -40,7 +40,7 @@ function incrementFieldTransform(){
     }
 
     if (field_transform <= -435 && field_transform >= -1435) {
-        banner1.style.transform = "translateY(460px)";
+        banner1.style.transform = "translateY(450px)";
     } else {
         banner1.style.transform = "translateY(0px)";
     }

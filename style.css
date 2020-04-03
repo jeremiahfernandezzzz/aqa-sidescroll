@@ -344,7 +344,6 @@ body {
   font-size: 20pt;
   opacity: .75;
   top: 10px;
-  left: 5px;
 }
 
 .field-marker2 {
@@ -353,7 +352,16 @@ body {
   font-size: 20pt;
   opacity: .75;
   bottom: 10px;
-  right: 5px;
+}
+
+.c1 .field-marker2{
+  right: 1px;
+/*   text-align: right; */
+}
+
+.c2 .field-marker2{
+  left: 1px;
+/*   text-align: left; */
 }
 
 .wideout-aqa {
