@@ -288,13 +288,13 @@ body {
 
 .player {
   position: fixed;
-  bottom: 140px;
+  bottom: 200px;
   left: 43vw;
   z-index: 99;
 	width: 150px;
-	height: 198px;
-	background: url("https://cdn.glitch.com/86b4014a-f440-4d24-a691-816664bd0a55%2Fkramer_sprites.png?v=1585926499673");
-	background-position: -600px;
+	height: 94px;
+	background: url("https://cdn.glitch.com/86b4014a-f440-4d24-a691-816664bd0a55%2Ffootball-small.png?v=1585929678648");
+/* 	background-position: -600px; */
 	text-align: center;
 	font-family: Pixeled;
 	font-size: 10pt;

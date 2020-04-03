@@ -8,10 +8,18 @@ var incrementFieldIsTrue = false;
 
 
 function isIncrementFieldTrue() {
+  
+    window.addEventListener("wheel", function(e){
+      if (e) {
+        incrementFieldIsTrue = true;
+      } else {
+        incrementFieldIsTrue = false;
+      }
+    })
+  
     window.addEventListener("mousedown", function(){
         incrementFieldIsTrue = true;
-        player.style.animation = "animate-char6 steps(4) reverse infinite 1s";
-
+        // player.style.animation = "animate-char6 steps(4) reverse infinite 1s";
     })
     
     window.addEventListener("mouseup", function(){
