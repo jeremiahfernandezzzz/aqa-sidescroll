@@ -288,7 +288,7 @@ body {
 
 .player {
   position: fixed;
-  bottom: 200px;
+  bottom: 325px;
   left: 43vw;
   z-index: 99;
 	width: 150px;
@@ -303,7 +303,7 @@ body {
 
 .field {
   position: relative;
-  height: 40vh;
+  height: 75vh;
   width: 1046%;
   padding: 100px;
   outline: solid 10px rgb(255,255,255, .5);
@@ -345,6 +345,15 @@ body {
   opacity: .75;
   top: 10px;
   left: 5px;
+}
+
+.field-marker2 {
+  position: absolute;
+  font-family: Pixeled;
+  font-size: 20pt;
+  opacity: .75;
+  bottom: 10px;
+  right: 5px;
 }
 
 .wideout-aqa {

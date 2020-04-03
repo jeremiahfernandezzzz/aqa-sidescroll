@@ -10,10 +10,10 @@ var incrementFieldIsTrue = false;
 function isIncrementFieldTrue() {
   
     window.addEventListener("wheel", function(e){
-      if (e) {
-        incrementFieldIsTrue = true;
-      } else {
-        incrementFieldIsTrue = false;
+      if (e.deltaY < 0) {
+        field_transform += 50;
+      } else if (e.deltaY > 0) {
+        field_transform -= 50;
       }
     })
   
