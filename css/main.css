@@ -590,3 +590,17 @@
     position: relative;
     transition: 1s;
   }
+
+  .phone {
+    position: relative;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 20pt;
+  }
+
+  .email {
+    position: relative;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 20pt;
+  }
