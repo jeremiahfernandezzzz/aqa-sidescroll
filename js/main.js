@@ -5,7 +5,7 @@ var banner1 = document.querySelector(".banner1");
 // var services = document.querySelector(".services"); 
 var ball = document.querySelector(".ball");
 var field_transform = 0;
-var incrementFieldIsTrue = false;
+var incrementFieldIsTrue = 0;
 
 
 function isIncrementFieldTrue() {
@@ -35,13 +35,28 @@ function isIncrementFieldTrue() {
     window.addEventListener("keydown", function(e){
         // e.preventDefault();
 
-        if (e.keyCode == 37 && field_transform < 0) {
-            field_transform += 50;
+        if (e.keyCode == 37 && field_transform <= 0) {
+            // field_transform += 25;
+            incrementFieldIsTrue = 2;
         } else if (e.keyCode == 39 && field_transform > -9300) {
-            field_transform -= 50;
+            incrementFieldIsTrue = 1;
         }
         
-        ball.style.backgroundPosition = 3*field_transform +  "px";
+        // ball.style.backgroundPosition = 6*field_transform +  "px";
+        // ball.innerHTML = field_transform;
+    })
+  
+    window.addEventListener("keyup", function(e){
+        // e.preventDefault();
+
+        if (e.keyCode == 37 && field_transform <= 0) {
+            // field_transform += 25;
+            incrementFieldIsTrue = 0;
+        } else if (e.keyCode == 39 && field_transform > -9300) {
+            incrementFieldIsTrue = 0;
+        }
+        
+        // ball.style.backgroundPosition = 6*field_transform +  "px";
         // ball.innerHTML = field_transform;
     })
 }
@@ -49,9 +64,12 @@ function isIncrementFieldTrue() {
 function incrementFieldTransform(){
     // ball.style.left =  field_transform / 9810 * -100 + "vw";
 
-    if (incrementFieldIsTrue && field_transform >= -9610){
-        field_transform -= 5;
+    if (incrementFieldIsTrue == 1 && field_transform > -9300){
+        field_transform -= 10;
         ball.style.animation = "animate-char6 steps(7) infinite 1s";
+    } else if (incrementFieldIsTrue == 2 && field_transform <= 0) {
+        field_transform += 10;
+        ball.style.animation = "animate-char6 steps(7) reverse infinite 1s";
     } else {
         ball.style.animation = "";
     }
