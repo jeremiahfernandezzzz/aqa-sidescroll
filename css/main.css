@@ -414,6 +414,14 @@
     top: 210px;
   }
   
+  .start {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20pt;
+    top: 110px;
+/*     text-align: left; */
+  }
+
   .aqa {
     text-align: center;
   } 

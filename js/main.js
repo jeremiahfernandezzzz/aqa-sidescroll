@@ -33,7 +33,7 @@ function isIncrementFieldTrue() {
     // })
 
     window.addEventListener("keydown", function(e){
-        e.preventDefault();
+        // e.preventDefault();
 
         if (e.keyCode == 37 && field_transform < 0) {
             field_transform += 50;
@@ -218,7 +218,13 @@ function play(){
     incrementFieldTransform();
 }
 
+function fieldReset(){
+    main_field.style.transform = "";
+    banner_container.style.transform = "";
+}
+
 window.addEventListener("load", function(){
+    fieldReset();
     isIncrementFieldTrue();
     setInterval(function(){
         play();
