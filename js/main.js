@@ -221,6 +221,7 @@ function play(){
 function fieldReset(){
     main_field.style.transform = "";
     banner_container.style.transform = "";
+    document.querySelector(".start").innerHTML = "press right arrow or<br/>scroll down to start"
 }
 
 window.addEventListener("load", function(){

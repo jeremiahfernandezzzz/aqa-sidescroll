@@ -418,11 +418,11 @@
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-size: 20pt;
-    top: 110px;
-/*     text-align: left; */
+    top: 160px;
+    text-align: center;
   }
 
-  .aqa {
+  .center-text {
     text-align: center;
   } 
 
