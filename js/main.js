@@ -13,14 +13,14 @@ function isIncrementFieldTrue() {
     window.addEventListener("wheel", function(e){
         e.preventDefault();
 
-        if (e.deltaY < 0) {
+        if (e.deltaY < 0 && field_transform < 0) {
             field_transform += 50;
-        } else if (e.deltaY > 0) {
+        } else if (e.deltaY > 0 && field_transform > -9300) {
             field_transform -= 50;
         }
         
         ball.style.backgroundPosition = 3*field_transform +  "px";
-        ball.innerHTML = field_transform;
+        // ball.innerHTML = field_transform;
     })
   
     // window.addEventListener("mousedown", function(){
@@ -35,14 +35,14 @@ function isIncrementFieldTrue() {
     window.addEventListener("keydown", function(e){
         e.preventDefault();
 
-        // if (e.deltaY < 0) {
-        //     field_transform += 50;
-        // } else if (e.deltaY > 0) {
+        if (e.keyCode == 37 && field_transform < 0) {
+            field_transform += 50;
+        } else if (e.keyCode == 39 && field_transform > -9300) {
             field_transform -= 50;
-        // }
+        }
         
         ball.style.backgroundPosition = 3*field_transform +  "px";
-        ball.innerHTML = field_transform;
+        // ball.innerHTML = field_transform;
     })
 }
 
@@ -131,7 +131,7 @@ function incrementFieldTransform(){
         
         setTimeout(function(){
             document.querySelector(".line3").style.opacity = "1";
-            document.querySelector(".line3").style.transform = "translateX(0px)";
+            // document.querySelector(".line3").style.transform = "translateX(0px)";
         }, 1500)
         
         setTimeout(function(){
@@ -164,7 +164,7 @@ function incrementFieldTransform(){
         document.querySelector(".line2").style.opacity = "0";
         
         document.querySelector(".line3").style.opacity = "0";
-        document.querySelector(".line3").style.transform = "translateX(-100px)";
+        // document.querySelector(".line3").style.transform = "translateX(-100px)";
 
         document.querySelector(".line4").style.opacity = "0";
         
